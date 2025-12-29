@@ -104,11 +104,47 @@ section .infos {
 }
 
 .fill {
+    /* border-radius: 100%; */
     background-color: var(--bg-fill-color);
 }
 
 .food {
+    border-radius: 50%;
     background-color: var(--bg-food-color);
+    animation: glow 1.5s infinite alternate
+        /* box-shadow: 0 0 10px red; */
+        /* box-shadow: */
+        /* Multiple shadows are stacked for a deeper effect */
+        /* 0 0 5px #fff,
+    0 0 10px #ff0000,
+    0 0 15px #ff0000,
+    0 0 20px #ff0000 */
+
+        /* background-color: whitesmoke; */
+}
+
+@keyframes glow {
+    from {
+        /* Dims the glow */
+        box-shadow:
+            /* 0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #ffffff, */
+            0 0 20px #ffffff,
+            0 0 30px #ffffff,
+            0 0 40px #ffffff;
+    }
+
+    to {
+        /* Intensifies the glow */
+        box-shadow:
+            /* 0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #ff2600, */
+            0 0 40px #ff2600,
+            0 0 60px #ff2600,
+            0 0 80px #ff2600;
+    }
 }
 
 .modal {
@@ -135,6 +171,6 @@ section .infos {
     display: none;
 }
 
-.head{
+.head {
     background-color: greenyellow;
 }
